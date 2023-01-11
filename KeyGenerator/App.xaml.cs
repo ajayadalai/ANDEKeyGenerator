@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 using System.Windows;
 using Domain;
 
@@ -17,7 +12,8 @@ namespace TestApplication
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            ConfigConstants.DBPath = System.Configuration.ConfigurationSettings.AppSettings["SQLiteDBPath"];
+            ConfigConstants.DBPath = ConfigurationSettings.AppSettings["SQLiteDBPath"];
+
         }
     }
 }
